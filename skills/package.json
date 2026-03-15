@@ -1,0 +1,32 @@
+{
+  "name": "@agentwxo/skills",
+  "version": "1.0.1",
+  "description": "AI agent skills for algorithmic trading infrastructure",
+  "scripts": {
+    "build": "cd app && npm run build",
+    "vercel-build": "cd app && npm run build"
+  },
+  "keywords": [
+    "agentwxo",
+    "trading",
+    "crypto",
+    "ai-agent",
+    "skills",
+    "algorithmic-trading"
+  ],
+  "homepage": "https://trade.coinmarketfacts.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agentwxo/skills.git"
+  },
+  "license": "Apache-2.0",
+  "author": "AgentWXO",
+  "files": [
+    "skills/",
+    "skills.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "prompts": [
+    {
+      "id": "install_api",
+      "prompt": "Install Hummingbot API by cloning https://github.com/hummingbot/hummingbot-api.git to ~/hummingbot-api, then run make setup and make deploy",
+      "verify": "curl -s http://localhost:8000/docs | grep -qi swagger"
+    },
+    {
+      "id": "verify",
+      "prompt": "Run /scripts/verify.sh to verify Hummingbot API installation",
+      "script": "verify.sh",
+      "verify": "echo 'manual'"
+    },
+    {
+      "id": "install_mcp",
+      "prompt": "Run /scripts/install_mcp.sh --agent claude-code to install MCP server",
+      "script": "install_mcp.sh --agent claude-code",
+      "verify": "docker images | grep hummingbot-mcp"
+    },
+    {
+      "id": "install_condor",
+      "prompt": "Run /scripts/install_condor.sh to install Condor Telegram bot",
+      "script": "install_condor.sh",
+      "verify": "docker ps | grep condor"
+    }
+  ]
+}
